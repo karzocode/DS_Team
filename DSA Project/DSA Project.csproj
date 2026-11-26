@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A7C38A7-7D62-429D-A6ED-54FFC700B80A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DSA_Project</RootNamespace>
+    <AssemblyName>DSA Project</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\Showtime.cs" />
+    <Compile Include="Models\Seat.cs" />
+    <Compile Include="DataStructures\MovieDictionary.cs" />
+    <Compile Include="DataStructures\MovieBST.cs" />
+    <Compile Include="DataStructures\BookingQueue.cs" />
+    <Compile Include="DataStructures\BookingHistoryList.cs" />
+    <Compile Include="DataStructures\UndoStack.cs" />
+    <Compile Include="DataStructures\SeatArray.cs" />
+    <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\MovieService.cs" />
+    <Compile Include="Services\BookingService.cs" />
+    <Compile Include="Services\SeatService.cs" />
+    <Compile Include="Services\TicketService.cs" />
+    <Compile Include="Forms\AddMovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMovieForm.Designer.cs">
+      <DependentUpon>AddMovieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminMovieManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminMovieManagement.Designer.cs">
+      <DependentUpon>AdminMovieManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BookingHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookingHistory.Designer.cs">
+      <DependentUpon>BookingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MovieDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MovieDetailsForm.Designer.cs">
+      <DependentUpon>MovieDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MyBookingForm.Designer.cs">
+      <DependentUpon>MyBookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchMovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchMovieForm.Designer.cs">
+      <DependentUpon>SearchMovieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SeatSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeatSelection.Designer.cs">
+      <DependentUpon>SeatSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddMovieForm.resx">
+      <DependentUpon>AddMovieForm.cs</DependentUpon>
+      <!-- الكلاس اسمه AddMovie، وComponentResourceManager يبحث عن DSA_Project.AddMovie.resources.
+           الاسم القديم (AddMovieForm.resources) كان يخلي فتح شاشة إضافة فيلم يضرب MissingManifestResourceException. -->
+      <LogicalName>DSA_Project.AddMovie.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+      <LogicalName>DSA_Project.AdminDashboard.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminMovieManagement.resx">
+      <DependentUpon>AdminMovieManagement.cs</DependentUpon>
+      <LogicalName>DSA_Project.AdminMovieManagement.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BookingHistory.resx">
+      <DependentUpon>BookingHistory.cs</DependentUpon>
+      <LogicalName>DSA_Project.BookingHistory.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <LogicalName>DSA_Project.Login.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MovieDetailsForm.resx">
+      <DependentUpon>MovieDetailsForm.cs</DependentUpon>
+      <LogicalName>DSA_Project.MovieDetailsForm.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+      <LogicalName>DSA_Project.Home.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyBookingForm.resx">
+      <DependentUpon>MyBookingForm.cs</DependentUpon>
+      <LogicalName>DSA_Project.MyBookingForm.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchMovieForm.resx">
+      <DependentUpon>SearchMovieForm.cs</DependentUpon>
+      <LogicalName>DSA_Project.SearchMovieForm.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SeatSelection.resx">
+      <DependentUpon>SeatSelection.cs</DependentUpon>
+      <LogicalName>DSA_Project.SeatSelection.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+      <LogicalName>DSA_Project.Welcome.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="..\README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
